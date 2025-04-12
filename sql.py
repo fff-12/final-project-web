@@ -4,12 +4,9 @@ conn = sqlite3.connect("quiz.db")
 cursor = conn.cursor()
 
 def create_db():
-    cursor.execute('''CREATE TABLE IF NOT EXISTS class(
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name VARCHAR)''')
-
     cursor.execute('''CREATE TABLE IF NOT EXISTS weapon(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+                class VARCHAR,
                 name VARCHAR,
                 image VARCHAR,
                 damage VARCHAR,
@@ -18,6 +15,7 @@ def create_db():
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS armor(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+                class VARCHAR,
                 name VARCHAR,
                 image VARCHAR,
                 defens VARCHAR,
@@ -26,6 +24,7 @@ def create_db():
     
     cursor.execute('''CREATE TABLE IF NOT EXISTS accessories(
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+                class VARCHAR,
                 name VARCHAR,
                 bonus VARCHAR,
                 damage VARCHAR,
@@ -168,3 +167,17 @@ def fill_db():
     ]
     Armor = []
     Accessories = []
+
+def select(sql, par = None):
+    conn = sqlite3.connect("quiz.db")
+    cursor = conn.cursor()
+
+    if par:
+        cursor.execute(sql, par)
+    else:
+        cursor.execute(sql)
+
+    data = cursor.fetchall()
+    conn.commit()
+    conn.close()
+    return data
