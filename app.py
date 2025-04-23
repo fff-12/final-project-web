@@ -1,10 +1,10 @@
-import flask 
+from flask import Flask, render_template
 
-app = flask.Flask(__name__)
+app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return flask.render_template('web.html')
+@app.route("/")
+def home():
+    return render_template("web.html")
 
-if __name__ == 'class_guide':
+if __name__ == "__main__":
     app.run(debug=True)
