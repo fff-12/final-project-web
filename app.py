@@ -1,6 +1,18 @@
 from flask import Flask, render_template
+import sqlite3
 
 app = Flask(__name__)
+
+def db_connect():
+
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM Classes")
+    classes = cursor.fetchall()
+    cursor.execute("SELECT * FROM Weapon")
+    weapons = cursor.fetchall()
+    conn.close()
+    return classes, weapons
 
 @app.route('/')
 def home():
@@ -12,7 +24,8 @@ def magic():
 
 @app.route('/melee')
 def meele():
-    return render_template('melee.html')
+    weapons, classes = db_connect()
+    return render_template('melee.html', weapons=weapons, classes=classes)
 
 @app.route('/ranger')
 def ranger():

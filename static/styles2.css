@@ -60,3 +60,15 @@ a:hover {
   margin: 0 auto;
   text-align: justify;
 }
+
+.site-title {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  font-size: 27px;
+  font-weight: bold;
+  color: #98cfc7;
+  text-shadow: 0 0 5px rgba(135, 240, 214, 0.3);
+  z-index: 1000;
+}
+
