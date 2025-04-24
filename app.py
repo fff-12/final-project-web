@@ -9,7 +9,7 @@ def db_connect():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM Classes")
     classes = cursor.fetchall()
-    cursor.execute("SELECT * FROM Weapon")
+    cursor.execute("SELECT * FROM Weapons")
     weapons = cursor.fetchall()
     conn.close()
     return classes, weapons
