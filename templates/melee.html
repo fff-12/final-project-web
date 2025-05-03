@@ -1,30 +1,163 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Класи в Terraria</title>
-  <link rel="stylesheet" href="/static/styles2.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
 </head>
 <body>
   <div class="site-title"><a href="/">Terraria Класовий Кодекс</a></div>
 
   <div class="container">
+    <!-- Початковий етап -->
     <div class="template">
-      <h2>Передбосовий етап</h2>
-      <p>Тут буде інформація про класи на початку гри.</p>
+      <h2>Початковий етап</h2>
+
+      <details>
+        <summary>Зброя</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/sword.png') }}" alt="Меч">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Дерев'яний меч</div>
+              <div class="item-desc">Простий стартовий меч. 7 шкоди, дуже повільна атака.</div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Броня</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/armor.png') }}" alt="Броня">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Дерев'яна броня</div>
+              <div class="item-desc">Найслабша броня, захист: 3. Робиться з дерева.</div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Аксесуари</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/boots.png') }}" alt="Аксесуар">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Швидкі черевики</div>
+              <div class="item-desc">Збільшують швидкість руху. Дає +10% швидкості.</div>
+            </div>
+          </div>
+        </div>
+      </details>
     </div>
-    <div class="template">
-      <h2>Середина гри</h2>
-      <p>Тут буде інформація про класи під час середини гри.</p>
-    </div>
+
+    <!-- Хардмод -->
     <div class="template">
       <h2>Хардмод</h2>
-      <p>Тут буде інформація про класи після початку Хардмоду.</p>
+
+      <details>
+        <summary>Зброя</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/fire_wand.png') }}" alt="Магія">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Магічна іскра</div>
+              <div class="item-desc">Базова магічна зброя. Стріляє фаєрболами, 9 шкоди, витрачає ману.</div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Броня</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/steel_armor.png') }}" alt="Броня">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Сталева броня</div>
+              <div class="item-desc">Набагато міцніша броня з високим захистом, 10 захисту.</div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Аксесуари</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/warrior_ring.png') }}" alt="Аксесуар">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Перстень воїна</div>
+              <div class="item-desc">Збільшує шкоду від фізичних атак на 15%.</div>
+            </div>
+          </div>
+        </div>
+      </details>
     </div>
+
+    <!-- Кінець гри -->
     <div class="template">
       <h2>Кінець гри</h2>
-      <p>Тут буде інформація про класи на фінальних етапах гри.</p>
+
+      <details>
+        <summary>Зброя</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/starfury.png') }}" alt="Меч">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Зірковий меч</div>
+              <div class="item-desc">Меч з потужними космічними властивостями. 50 шкоди, атака через зірки.</div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Броня</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/solar_armor.png') }}" alt="Броня">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Сонячна броня</div>
+              <div class="item-desc">Міць сонячного каменю, забезпечує 30 захисту.</div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Аксесуари</summary>
+        <div class="inner-content">
+          <div class="item-card">
+            <div class="item-image">
+              <img src="{{ url_for('static', filename='img/solar_wings.png') }}" alt="Аксесуар">
+            </div>
+            <div class="item-text">
+              <div class="item-name">Сонячні крила</div>
+              <div class="item-desc">Дають можливість літати, дають +15% до швидкості руху.</div>
+            </div>
+          </div>
+        </div>
+      </details>
     </div>
   </div>
 </body>
