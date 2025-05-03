@@ -9,10 +9,22 @@ def db_connect():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM Classes")
     classes = cursor.fetchall()
-    cursor.execute("SELECT * FROM Weapons")
-    weapons = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM Weapons WHERE class_id == 1")
+    weapons1 = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM Weapons WHERE class_id == 2")
+    weapons2 = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM Weapons WHERE class_id == 3")
+    weapons3 = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM Weapons WHERE class_id == 4")
+    weapons4 = cursor.fetchall()
+
     conn.close()
-    return classes, weapons
+
+    return classes, weapons1, weapons2, weapons3, weapons4
 
 @app.route('/')
 def home():
@@ -24,8 +36,8 @@ def magic():
 
 @app.route('/melee')
 def meele():
-    weapons, classes = db_connect()
-    return render_template('melee.html', weapons=weapons, classes=classes)
+    classes, weapons1, weapons2, weapons3, weapons4  = db_connect()
+    return render_template('melee.html', weapons1=weapons1, weapons2=weapons2, weapons3=weapons3, weapons4=weapons4, classes=classes)
 
 @app.route('/ranger')
 def ranger():

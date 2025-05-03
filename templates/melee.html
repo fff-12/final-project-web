@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Класи в Terraria</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+  <link rel="stylesheet" href="/static/styles2.css">
 </head>
 <body>
   <div class="site-title"><a href="/">Terraria Класовий Кодекс</a></div>
@@ -16,17 +16,109 @@
 
       <details>
         <summary>Зброя</summary>
-        <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/sword.png') }}" alt="Меч">
-            </div>
-            <div class="item-text">
-              <div class="item-name">Дерев'яний меч</div>
-              <div class="item-desc">Простий стартовий меч. 7 шкоди, дуже повільна атака.</div>
-            </div>
-          </div>
-        </div>
+          <details>
+            <summary>Етап до босів</summary>
+              <div class="inner-content">
+                <div class="item-card">
+                  <div class="item-image">
+                    <img src="/static/img/Wooden_Sword.png" alt="Меч">
+                  </div>
+                  <div class="item-text">
+                    <div class="item-name">{{weapons1[0][2]}}</div>
+                    <div class="item-desc">{{weapons1[0][5]}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inner-content">
+                <div class="item-card">
+                  <div class="item-image">
+                    <img src="/static/img/Gold_Broadsword.webp" alt="Меч">
+                  </div>
+                  <div class="item-text">
+                    <div class="item-name">{{weapons1[1][2]}}</div>
+                    <div class="item-desc">{{weapons1[1][5]}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inner-content">
+                <div class="item-card">
+                  <div class="item-image">
+                    <img src="/static/img/Platinum_Broadsword.webp" alt="Меч">
+                  </div>
+                  <div class="item-text">
+                    <div class="item-name">{{weapons1[2][2]}}</div>
+                    <div class="item-desc">{{weapons1[2][5]}}</div>
+                  </div>
+                </div>
+              </div>
+          </details>
+
+          <details>
+            <summary>Ранні боси</summary>
+              <div class="inner-content">
+                <div class="item-card">
+                  <div class="item-image">
+                    <img src="/static/img/Wooden_Sword.png" alt="Меч">
+                  </div>
+                  <div class="item-text">
+                    <div class="item-name">{{weapons1[3][2]}}</div>
+                    <div class="item-desc">{{weapons1[3][5]}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inner-content">
+                <div class="item-card">
+                  <div class="item-image">
+                    <!-- <video preload="auto" loop autoplay src="/static/img/Phaseblade.gif"></video></div> Перепавити стиль під гіфку -->
+                  <div class="item-text">
+                    <div class="item-name">{{weapons1[4][2]}}</div>
+                    <div class="item-desc">{{weapons1[4][5]}}</div>
+                  </div>
+                </div>
+              </div>
+          </details>
+
+          <details>
+            <summary>Межа Хардмоду</summary>
+              <div class="inner-content">
+                <div class="item-card">
+                  <div class="item-image">
+                    <img src="/static/img/Wooden_Sword.png" alt="Меч">
+                  </div>
+                  <div class="item-text">
+                    <div class="item-name">{{weapons1[5][2]}}</div>
+                    <div class="item-desc">{{weapons1[5][5]}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inner-content">
+                <div class="item-card">
+                  <div class="item-image">
+                    <img src="/static/img/Gold_Broadsword.webp" alt="Меч">
+                  </div>
+                  <div class="item-text">
+                    <div class="item-name">{{weapons1[6][2]}}</div>
+                    <div class="item-desc">{{weapons1[6][5]}}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="inner-content">
+                <div class="item-card">
+                  <div class="item-image">
+                    <img src="/static/img/Platinum_Broadsword.webp" alt="Меч">
+                  </div>
+                  <div class="item-text">
+                    <div class="item-name">{{weapons1[7][2]}}</div>
+                    <div class="item-desc">{{weapons1[7][5]}}</div>
+                  </div>
+                </div>
+              </div>
+          </details>
       </details>
 
       <details>
