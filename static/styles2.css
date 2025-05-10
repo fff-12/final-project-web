@@ -1,68 +1,68 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(to right, #1b1b1b, #2a2a2a);
-  color: #dcdcdc;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background: url("/static/img/back1.gif") no-repeat center center fixed;
+  background-size: cover;
+  color: #f0d7d7;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.container {
-  width: 100%;
-  max-width: 800px;
-  padding: 40px 20px;
-  box-sizing: border-box;
-}
-
-.template {
-  background: #2c2c2c;
-  border: 1px solid #3a3a3a;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
-}
-
-.template:hover {
-  background: #333;
-  border-color: #555;
-  box-shadow: 0 0 12px rgba(180, 255, 240, 0.1);
-}
-
-.template h2 {
-  color: #b0f0e6;
-  text-shadow: 0 0 6px rgba(176, 240, 230, 0.3);
-  margin-top: 0;
-  text-transform: uppercase;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
+/* Заголовок сайту */
 .site-title {
-  position: fixed;
-  top: 10px;
-  left: 20px;
-  font-size: 27px;
+  font-size: 22px;
   font-weight: bold;
   color: #98cfc7;
   text-shadow: 0 0 5px rgba(135, 240, 214, 0.3);
+  background: rgba(30, 50, 50, 0.3);
+  border: 3px double #77bfb3;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+  position: fixed;
+  top: 10px;
+  left: 20px;
   z-index: 1000;
 }
 
-/* Accordion styles */
+.site-title:hover {
+  transform: scale(1.03);
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 80px 20px 40px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Шаблон секції */
+.template {
+  background: rgba(80, 20, 20, 0.6);
+  border: 4px double #ff9f9f;
+  border-radius: 12px;
+  padding: 20px 40px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 20px rgba(255, 120, 120, 0.3);
+}
+
+/* Заголовки */
+h2 {
+  color: #ffc0c0;
+  text-transform: uppercase;
+  margin-top: 0;
+  text-align: center;
+  text-shadow: 0 0 10px #f88;
+  letter-spacing: 1.5px;
+}
+
+/* Деталі (акордеон) */
 details {
   margin-top: 10px;
-  background-color: #2c2c2c;
+  background-color: rgba(44, 44, 44, 0.8);
   border: 1px solid #3a3a3a;
   border-radius: 8px;
   padding: 10px;
@@ -81,21 +81,22 @@ summary:hover {
 }
 
 details[open] {
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.8);
   border-color: #555;
 }
 
+/* Внутрішній контент */
 .inner-content {
   margin-left: 1rem;
   color: #cfcfcf;
   padding-top: 8px;
 }
 
-/* Item Card Style */
+/* Картка елемента */
 .item-card {
   display: flex;
   align-items: center;
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.9);
   border: 1px solid #3a3a3a;
   border-radius: 8px;
   padding: 10px 15px;
@@ -105,7 +106,7 @@ details[open] {
 }
 
 .item-card:hover {
-  background-color: #282828;
+  background-color: rgba(40, 40, 40, 0.9);
 }
 
 .item-image {
@@ -113,7 +114,8 @@ details[open] {
   margin-right: 15px;
 }
 
-.item-image img {
+.item-image img,
+.item-image video {
   width: 64px;
   height: 64px;
   object-fit: contain;
@@ -136,4 +138,14 @@ details[open] {
   color: #d0d0d0;
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+/* Посилання */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

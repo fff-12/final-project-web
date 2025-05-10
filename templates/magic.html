@@ -3,78 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Класи в Terraria</title>
-  <link rel="stylesheet" href="/static/styles2.css">
+  <title>Terraria Items</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-title"><a href="/">Terraria Класовий Кодекс</a></div>
+
+  <!-- Заголовок з gif -->
+  <div class="site-header">
+    <img class="site-gif" src="gif.gif" alt="site gif">
+    <div class="site-title">Terraria Items</div>
+  </div>
 
   <div class="container">
+
+    <!-- Приклад шаблону предмета -->
     <div class="template">
-      <h2>Початковий етап</h2>
-      <details>
-        <summary>Зброя</summary>
-        <div class="inner-content">
-          <p>Дерев'яний меч, Копійцева паличка, Магічна іскра...</p>
+      <h2>Категорія: Мечі</h2>
+      <div class="item-card">
+        <div class="item-image">
+          <img src="sword.png" alt="меч">
         </div>
-      </details>
-      <details>
-        <summary>Броня</summary>
-        <div class="inner-content">
-          <p>Дерев'яна броня, Броня зтіней...</p>
+        <div class="item-text">
+          <div class="item-name">Нічний Меч</div>
+          <div class="item-desc">Один із найпотужніших мечів середньої гри, використовується для крафту True Night's Edge.</div>
         </div>
-      </details>
-      <details>
-        <summary>Аксесуари</summary>
-        <div class="inner-content">
-          <p>Швидкі черевики, Знаки втечі, Магнітні кристали...</p>
-        </div>
-      </details>
+      </div>
     </div>
 
-    <div class="template">
-      <h2>Хардмод</h2>
-      <details>
-        <summary>Зброя</summary>
-        <div class="inner-content">
-          <p>Меч нічного краю, Магічний гарпун...</p>
-        </div>
-      </details>
-      <details>
-        <summary>Броня</summary>
-        <div class="inner-content">
-          <p>Адамантитова, Титанова броня...</p>
-        </div>
-      </details>
-      <details>
-        <summary>Аксесуари</summary>
-        <div class="inner-content">
-          <p>Сонячний камінь, Сили Міміка...</p>
-        </div>
-      </details>
-    </div>
+    <!-- Accordion -->
+    <details>
+      <summary>Детальніше про предмети</summary>
+      <div class="inner-content">
+        Тут можна розмістити додаткову інформацію, характеристики або поради.
+      </div>
+    </details>
 
-    <div class="template">
-      <h2>Кінець гри</h2>
-      <details>
-        <summary>Зброя</summary>
-        <div class="inner-content">
-          <p>Терра меч, Місячний лук, Остання призма...</p>
-        </div>
-      </details>
-      <details>
-        <summary>Броня</summary>
-        <div class="inner-content">
-          <p>Небесна броня, Сетові костюми кінця гри...</p>
-        </div>
-      </details>
-      <details>
-        <summary>Аксесуари</summary>
-        <div class="inner-content">
-          <p>Шар мани, Об’єднані аксесуари Місячного Повелителя...</p>
-        </div>
-      </details>
-    </div>
   </div>
 </body>
 </html>
