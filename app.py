@@ -13,18 +13,18 @@ def db_connect():
     cursor.execute("SELECT * FROM Weapons WHERE class_id == 1")
     weapons1 = cursor.fetchall()
 
-    cursor.execute("SELECT * FROM Weapons WHERE class_id == 2")
-    weapons2 = cursor.fetchall()
+#     cursor.execute("SELECT * FROM Weapons WHERE class_id == 2")
+#     weapons2 = cursor.fetchall()
 
-    cursor.execute("SELECT * FROM Weapons WHERE class_id == 3")
-    weapons3 = cursor.fetchall()
+#     cursor.execute("SELECT * FROM Weapons WHERE class_id == 3")
+#     weapons3 = cursor.fetchall()
 
-    cursor.execute("SELECT * FROM Weapons WHERE class_id == 4")
-    weapons4 = cursor.fetchall()
+#     cursor.execute("SELECT * FROM Weapons WHERE class_id == 4")
+#     weapons4 = cursor.fetchall()
 
-    conn.close()
+#     conn.close()
 
-    return classes, weapons1, weapons2, weapons3, weapons4
+    return classes, weapons1
 
 @app.route('/')
 def home():
@@ -34,10 +34,16 @@ def home():
 def magic():
     return render_template('magic.html')
 
+# @app.route('/melee')
+# def melee():
+#     return render_template('melee.html')
+
 @app.route('/melee')
 def meele():
-    classes, weapons1, weapons2, weapons3, weapons4  = db_connect()
-    return render_template('melee.html', weapons1=weapons1, weapons2=weapons2, weapons3=weapons3, weapons4=weapons4, classes=classes)
+    # classes, weapons1, weapons2, weapons3, weapons4  = db_connect()
+    # return render_template('melee.html', weapons1=weapons1, weapons2=weapons2, weapons3=weapons3, weapons4=weapons4, classes=classes)
+    classes, weapons1 = db_connect()
+    return render_template('melee.html', weapons1=weapons1, classes=classes)
 
 @app.route('/ranger')
 def ranger():

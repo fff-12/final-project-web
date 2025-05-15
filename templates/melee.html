@@ -2,255 +2,337 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Класи в Terraria</title>
-  <link rel="stylesheet" href="/static/styles2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Гайд по Terraria — Етапи гри та Melee зброя</title>
+  <link rel="stylesheet" href="/static/styles2.css" />
 </head>
 <body>
-  <div class="site-title"><a href="/">Terraria Класовий Кодекс</a></div>
+  <div class="overlay">
+    <h1 class="site-title"><a href="/">Гайд по Terraria — Етапи гри та Melee Зброя</a></h1>
 
-  <div class="container">
-    <!-- Початковий етап -->
-    <div class="template">
-      <h2>Початковий етап</h2>
+    <section class="container template">
+      <h2>🌱 Pre-Hardmode</h2>
+      <p>Це початковий етап гри, який охоплює весь прогрес до перемоги над Стінкою Плоті (Wall of Flesh). Гравець поступово досліджує світ, покращує спорядження і стикається з першими викликами.</p>
 
       <details>
-        <summary>Зброя</summary>
-          <details>
-            <summary>Етап до босів</summary>
-              <div class="inner-content">
-                <div class="item-card">
-                  <div class="item-image">
-                    <img src="/static/img/Wooden_Sword.png" alt="Меч">
-                  </div>
-                  <div class="item-text">
-                    <div class="item-name">{{weapons1[0][2]}}</div>
-                    <div class="item-desc">{{weapons1[0][5]}}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="inner-content">
-                <div class="item-card">
-                  <div class="item-image">
-                    <img src="/static/img/Gold_Broadsword.webp" alt="Меч">
-                  </div>
-                  <div class="item-text">
-                    <div class="item-name">{{weapons1[1][2]}}</div>
-                    <div class="item-desc">{{weapons1[1][5]}}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="inner-content">
-                <div class="item-card">
-                  <div class="item-image">
-                    <img src="/static/img/Platinum_Broadsword.webp" alt="Меч">
-                  </div>
-                  <div class="item-text">
-                    <div class="item-name">{{weapons1[2][2]}}</div>
-                    <div class="item-desc">{{weapons1[2][5]}}</div>
-                  </div>
-                </div>
-              </div>
-          </details>
+        <summary>📦 Ранній Pre-Hardmode</summary>
+        <div class="inner-content">
+          <p><strong>Опис:</strong><br>На самому початку гри гравець має лише базові інструменти та відсутність захисту. Основна мета — вижити, зібрати ресурси, побудувати базу та дослідити поверхню та печери.</p>
+          <p><strong>Боси:</strong></p>
+          <ul>
+            <li><strong>Король Слизень (King Slime)</strong> — факультативний бос, корисний для фарму гелю та ознайомлення з боєм.</li>
+            <li><strong>Око Ктулху (Eye of Cthulhu)</strong> — перший <em>обов'язковий</em> бос, відкриває шлях до кращих ресурсів (Crimtane/Demonite).</li>
+          </ul>
 
           <details>
-            <summary>Ранні боси</summary>
-              <div class="inner-content">
-                <div class="item-card">
-                  <div class="item-image">
-                    <img src="/static/img/Blood_Butcherer.webp" alt="Меч">
-                  </div>
-                  <div class="item-text">
-                    <div class="item-name">{{weapons1[3][2]}}</div>
-                    <div class="item-desc">{{weapons1[3][5]}}</div>
+            <summary>Melee зброя</summary>
+            <div class="inner-content">
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[0][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[0][4]}}</div>
                   </div>
                 </div>
-              </div>
-
-              <div class="inner-content">
-                <div class="item-card">
-                  <div class="item-image">
-                    <!-- <video preload="auto" loop autoplay src="/static/img/Phaseblade.gif"></video></div> Перепавити стиль під гіфку -->
-                  <div class="item-text">
-                    <div class="item-name">{{weapons1[4][2]}}</div>
-                    <div class="item-desc">{{weapons1[4][5]}}</div>
-                  </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[0][2]}}</div>
+                  <div class="item-desc">{{weapons1[0][5]}}</div>
                 </div>
               </div>
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[1][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[1][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[1][2]}}</div>
+                  <div class="item-desc">{{weapons1[1][5]}}</div>
+                </div>
+              </div>
+            </div>
           </details>
+        </div>
+      </details>
+
+      <details>
+        <summary>⚒️ Середній Pre-Hardmode</summary>
+        <div class="inner-content">
+          <p><strong>Опис:</strong><br>Після перемоги над першим босом гравець отримує доступ до нової руди та спорядження. Починає будувати тунелі, збирати кристали життя, досліджувати біоми.</p>
+          <p><strong>Боси:</strong></p>
+          <ul>
+            <li><strong>Пожирач Світів (Eater of Worlds)</strong> — для Корупції, <em>обов’язковий</em>.</li>
+            <li><strong>Мозок Ктулху (Brain of Cthulhu)</strong> — для Багряниці, <em>обов’язковий</em>.</li>
+          </ul>
 
           <details>
-            <summary>Межа Хардмоду</summary>
-              <div class="inner-content">
-                <div class="item-card">
-                  <div class="item-image">
-                    <img src="/static/img/Wooden_Sword.png" alt="Меч">
-                  </div>
-                  <div class="item-text">
-                    <div class="item-name">{{weapons1[5][2]}}</div>
-                    <div class="item-desc">{{weapons1[5][5]}}</div>
+            <summary>Melee зброя</summary>
+            <div class="inner-content">
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[2][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[2][4]}}</div>
                   </div>
                 </div>
-              </div>
-
-              <div class="inner-content">
-                <div class="item-card">
-                  <div class="item-image">
-                    <img src="/static/img/Gold_Broadsword.webp" alt="Меч">
-                  </div>
-                  <div class="item-text">
-                    <div class="item-name">{{weapons1[6][2]}}</div>
-                    <div class="item-desc">{{weapons1[6][5]}}</div>
-                  </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[2][2]}}</div>
+                  <div class="item-desc">{{weapons1[2][5]}}</div>
                 </div>
               </div>
-
-              <div class="inner-content">
-                <div class="item-card">
-                  <div class="item-image">
-                    <img src="/static/img/Platinum_Broadsword.webp" alt="Меч">
-                  </div>
-                  <div class="item-text">
-                    <div class="item-name">{{weapons1[7][2]}}</div>
-                    <div class="item-desc">{{weapons1[7][5]}}</div>
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[3][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[3][4]}}</div>
                   </div>
                 </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[3][2]}}</div>
+                  <div class="item-desc">{{weapons1[3][5]}}</div>
+                </div>
               </div>
+            </div>
           </details>
-      </details>
-
-      <details>
-        <summary>Броня</summary>
-        <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/armor.png') }}" alt="Броня">
-            </div>
-            <div class="item-text">
-              <div class="item-name">Дерев'яна броня</div>
-              <div class="item-desc">Найслабша броня, захист: 3. Робиться з дерева.</div>
-            </div>
-          </div>
         </div>
       </details>
 
       <details>
-        <summary>Аксесуари</summary>
+        <summary>🔥 Пізній Pre-Hardmode</summary>
         <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/boots.png') }}" alt="Аксесуар">
+          <p><strong>Опис:</strong><br>Гравець має найкраще спорядження Pre-Hardmode, збирає NPC, будує арену в Пеклі для бою зі Стінкою Плоті.</p>
+          <p><strong>Боси:</strong></p>
+          <ul>
+            <li><strong>Скелетрон (Skeletron)</strong> — обов’язковий для доступу до Підземної Бібліотеки.</li>
+            <li><strong>Королева Бджіл (Queen Bee)</strong> — необов’язковий бос, корисна для зброї.</li>
+            <li><strong>Стінка Плоті (Wall of Flesh)</strong> — головний фінальний бос Pre-Hardmode, перемога активує Hardmode.</li>
+          </ul>
+
+          <details>
+            <summary>Melee зброя</summary>
+            <div class="inner-content">
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[4][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[4][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[4][2]}}</div>
+                  <div class="item-desc">{{weapons1[4][5]}}</div>
+                </div>
+              </div>
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[5][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[5][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[5][2]}}</div>
+                  <div class="item-desc">{{weapons1[5][5]}}</div>
+                </div>
+              </div>      
             </div>
-            <div class="item-text">
-              <div class="item-name">Швидкі черевики</div>
-              <div class="item-desc">Збільшують швидкість руху. Дає +10% швидкості.</div>
-            </div>
-          </div>
+          </details>
         </div>
       </details>
-    </div>
+    </section>
 
-    <!-- Хардмод -->
-    <div class="template">
-      <h2>Хардмод</h2>
+    <section class="container template">
+      <h2>🌋 Hardmode</h2>
+      <p>Після активації Hardmode світ змінюється: нові біоми, вороги, підвищена складність. Гравець гониться за механічними босами та новими рудами.</p>
 
       <details>
-        <summary>Зброя</summary>
+        <summary>🏹 Ранній Hardmode</summary>
         <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/fire_wand.png') }}" alt="Магія">
+          <p><strong>Опис:</strong><br>Світ стає набагато небезпечнішим, з’являються Hallowed та нові вороги. Ціль — перемогти механічних босів.</p>
+          <p><strong>Боси:</strong></p>
+          <ul>
+            <li><strong>Близнюки (The Twins)</strong></li>
+            <li><strong>Руйнівник (The Destroyer)</strong></li>
+            <li><strong>Скелетрон-Прайм (Skeletron Prime)</strong></li>
+          </ul>
+
+          <details>
+            <summary>Melee зброя</summary>
+            <div class="inner-content">
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[6][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[6][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[6][2]}}</div>
+                  <div class="item-desc">{{weapons1[6][5]}}</div>
+                </div>
+              </div>
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[7][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[7][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[7][2]}}</div>
+                  <div class="item-desc">{{weapons1[7][5]}}</div>
+                </div>
+              </div>
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[8][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[8][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[8][2]}}</div>
+                  <div class="item-desc">{{weapons1[8][5]}}</div>
+                </div>
+              </div>
             </div>
-            <div class="item-text">
-              <div class="item-name">Магічна іскра</div>
-              <div class="item-desc">Базова магічна зброя. Стріляє фаєрболами, 9 шкоди, витрачає ману.</div>
-            </div>
-          </div>
+          </details>
         </div>
       </details>
 
       <details>
-        <summary>Броня</summary>
+        <summary>⚙️ Середній Hardmode</summary>
         <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/steel_armor.png') }}" alt="Броня">
+          <p><strong>Опис:</strong><br>Після механічних босів гравець добуває хлорофіт і готується до Плантери та Голема.</p>
+          <p><strong>Боси:</strong></p>
+          <ul>
+            <li><strong>Плантера (Plantera)</strong> — обов’язковий бос, відкриває Dungeon Hardmode.</li>
+            <li><strong>Голем (Golem)</strong> — наступний обов’язковий бос у Храмі Джунглів.</li>
+          </ul>
+
+          <details>
+            <summary>Melee зброя</summary>
+            <div class="inner-content">
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[9][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[9][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[9][2]}}</div>
+                  <div class="item-desc">{{weapons1[9][5]}}</div>
+                </div>
+              </div>
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[11][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[11][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[11][2]}}</div>
+                  <div class="item-desc">{{weapons1[11][5]}}</div>
+                </div>
+              </div>
+              <div class="item-card">
+                <div class="item-image">
+                  <img src={{weapons1[10][3]}} alt="Дерев'яний меч" />
+                  <div class="stats-boxes">
+                    <div class="stat-box">Шкода: {{weapons1[10][4]}}</div>
+                  </div>
+                </div>
+                <div class="item-text">
+                  <div class="item-name">{{weapons1[10][2]}}</div>
+                  <div class="item-desc">{{weapons1[10][5]}}</div>
+                </div>
+              </div>
             </div>
-            <div class="item-text">
-              <div class="item-name">Сталева броня</div>
-              <div class="item-desc">Набагато міцніша броня з високим захистом, 10 захисту.</div>
-            </div>
-          </div>
+          </details>
         </div>
       </details>
 
       <details>
-        <summary>Аксесуари</summary>
+        <summary>💀 Пізній Hardmode</summary>
         <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/warrior_ring.png') }}" alt="Аксесуар">
+          <p><strong>Опис:</strong><br>Після Голема гравець готується до фінального етапу та битви з Лунними Лордами.</p>
+          <p><strong>Боси:</strong></p>
+          <ul>
+          <li><strong>Лунатик Культист (Lunatic Cultist)</strong> — потужний бос, який з’являється після перемоги над Плантером (Plantera). Його поразка запускає місячний івент, що веде до битви з Лордом Місяця.</li>
+          <li><strong>Місячний Івент (Moon Event)</strong> — масштабна подія, що починається після перемоги над Лунатиком Культистом. В ході івенту гравця атакують хвилі потужних істот, а завершення івенту відкриває бій з Лордом Місяця — останнім босом гри.</li>
+          <li><strong>Лорд Місяця (Moon Lord)</strong> — головний і останній бос Terraria. Його поразка символізує завершення основного сюжету та відкриває доступ до найпотужнішого спорядження.</li>
+        </ul>
+
+          <details>
+            <summary>Melee зброя</summary>
+            <div class="inner-content">
+              <div class="item-card">
+                <div class="item-image">
+                  <img src="/static/img/items/solar_eruption.png" alt="Сонячне Вибухання" />
+                </div>
+                <div class="item-text">
+                  <div class="item-name">Сонячне Вибухання</div>
+                  <div class="item-desc">Величезний урон і проникаюча атака, ідеальна для останніх босів.</div>
+                </div>
+              </div>
+              <div class="item-card">
+                <div class="item-image">
+                  <img src="/static/img/items/terrablade.png" alt="Тера Блейд" />
+                </div>
+                <div class="item-text">
+                  <div class="item-name">Тера Блейд</div>
+                  <div class="item-desc">Найкращий меч у грі, поєднує швидкість, шкоду та критичний удар.</div>
+                </div>
+              </div>
             </div>
-            <div class="item-text">
-              <div class="item-name">Перстень воїна</div>
-              <div class="item-desc">Збільшує шкоду від фізичних атак на 15%.</div>
-            </div>
-          </div>
+          </details>
         </div>
       </details>
-    </div>
+    </section>
 
-    <!-- Кінець гри -->
-    <div class="template">
-      <h2>Кінець гри</h2>
+    <section class="container template">
+      <summary>🌌 Кінець гри / Endgame</summary>
+      <div class="inner-content">
+        <p><strong>Опис:</strong><br>
+          Після перемоги над Лунним Лордом гравець вступає у фінальний етап гри. Тут світ стає максимально стабільним, але водночас гравець має можливість дослідити всі секрети, зібрати найкраще спорядження та випробувати себе у складних подіях і режимах. Основна мета — досягти максимуму потужності свого персонажа, зокрема для melee-класу, та здолати всі виклики, що залишились.</p>
+        
+        <p><strong>Фінальний бос:</strong></p>
+        <ul>
+          <li><strong>Лорд Місяця (Moon Lord)</strong> — головний і останній бос Terraria. Його поразка символізує завершення основного сюжету та відкриває доступ до найпотужнішого спорядження.</li>
+        </ul>
 
-      <details>
-        <summary>Зброя</summary>
-        <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/starfury.png') }}" alt="Меч">
+        <details>
+          <summary>Melee зброя</summary>
+          <div class="inner-content">
+            <div class="item-card">
+              <div class="item-image">
+                <img src="/static/img/items/terrablade.png" alt="Тераблейд" />
+              </div>
+              <div class="item-text">
+                <div class="item-name">Тераблейд (Terra Blade)</div>
+                <div class="item-desc">
+                  Найпотужніший меч pre-hardmode, який отримують після низки складних крафтів і боссів. Має шкоду 95, критичний шанс 14%, унікальну здатність кидати енергетичні леза на відстань і швидко рубати ворогів.
+                </div>
+              </div>
             </div>
-            <div class="item-text">
-              <div class="item-name">Зірковий меч</div>
-              <div class="item-desc">Меч з потужними космічними властивостями. 50 шкоди, атака через зірки.</div>
+            <div class="item-card">
+              <div class="item-image">
+                <img src="/static/img/items/influx_waver.png" alt="Інфлакс Вейвер" />
+              </div>
+              <div class="item-text">
+                <div class="item-name">Інфлакс Вейвер (Influx Waver)</div>
+                <div class="item-desc">
+                  Унікальна енергетична зброя, що випадає після перемоги над Лордом Місяця. Має шкоду 110, швидку атаку, а також унікальний ефект — влучання створює ефект вибуху, що поширюється на кілька ворогів.
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </details>
-
-      <details>
-        <summary>Броня</summary>
-        <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/solar_armor.png') }}" alt="Броня">
-            </div>
-            <div class="item-text">
-              <div class="item-name">Сонячна броня</div>
-              <div class="item-desc">Міць сонячного каменю, забезпечує 30 захисту.</div>
-            </div>
-          </div>
-        </div>
-      </details>
-
-      <details>
-        <summary>Аксесуари</summary>
-        <div class="inner-content">
-          <div class="item-card">
-            <div class="item-image">
-              <img src="{{ url_for('static', filename='img/solar_wings.png') }}" alt="Аксесуар">
-            </div>
-            <div class="item-text">
-              <div class="item-name">Сонячні крила</div>
-              <div class="item-desc">Дають можливість літати, дають +15% до швидкості руху.</div>
-            </div>
-          </div>
-        </div>
-      </details>
-    </div>
+        </details>
+      </div>
+    </section>
   </div>
 </body>
 </html>

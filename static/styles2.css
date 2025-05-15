@@ -9,44 +9,58 @@ body {
   overflow: hidden;
 }
 
+/* Темне накладання з рамкою */
+.overlay {
+  background-color: rgba(20, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  border: 10px double #773333;
+  border-radius: 20px;
+}
+
 /* Заголовок сайту */
 .site-title {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: bold;
-  color: #98cfc7;
-  text-shadow: 0 0 5px rgba(135, 240, 214, 0.3);
-  background: rgba(30, 50, 50, 0.3);
-  border: 3px double #77bfb3;
-  padding: 8px 15px;
-  border-radius: 10px;
+  color: #f0c0c0;
+  text-shadow: 0 0 10px rgba(255, 150, 150, 0.4);
+  background: rgba(60, 20, 20, 0.65);
+  border: 3px double #aa5555;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
   transition: transform 0.2s ease;
-  position: fixed;
-  top: 10px;
-  left: 20px;
-  z-index: 1000;
 }
 
 .site-title:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 /* Контейнер */
 .container {
   width: 100%;
-  max-width: 800px;
-  padding: 80px 20px 40px;
-  box-sizing: border-box;
-  margin: 0 auto;
+  max-width: 900px;
+  background-color: rgba(255, 240, 240, 0.04);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(255, 80, 80, 0.15);
+  margin-bottom: 30px;
 }
 
 /* Шаблон секції */
 .template {
-  background: rgba(80, 20, 20, 0.6);
+  background: rgba(60, 20, 20, 0.65);
   border: 4px double #ff9f9f;
   border-radius: 12px;
-  padding: 20px 40px;
-  margin-bottom: 25px;
-  box-shadow: 0 0 20px rgba(255, 120, 120, 0.3);
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(255, 120, 120, 0.25);
 }
 
 /* Заголовки */
@@ -59,11 +73,11 @@ h2 {
   letter-spacing: 1.5px;
 }
 
-/* Деталі (акордеон) */
+/* Деталі */
 details {
   margin-top: 10px;
-  background-color: rgba(44, 44, 44, 0.8);
-  border: 1px solid #3a3a3a;
+  background-color: rgba(44, 0, 0, 0.5);
+  border: 1px solid #552a2a;
   border-radius: 8px;
   padding: 10px;
   transition: all 0.3s ease;
@@ -71,42 +85,43 @@ details {
 
 summary {
   font-weight: bold;
-  color: #b0f0e6;
+  color: #f5cccc;
   cursor: pointer;
   outline: none;
+  padding: 5px 0;
 }
 
 summary:hover {
-  color: #98cfc7;
+  color: #ffc0c0;
 }
 
 details[open] {
-  background-color: rgba(51, 51, 51, 0.8);
-  border-color: #555;
+  background-color: rgba(55, 0, 0, 0.6);
+  border-color: #aa5555;
 }
 
 /* Внутрішній контент */
 .inner-content {
   margin-left: 1rem;
-  color: #cfcfcf;
+  color: #dfbdbd;
   padding-top: 8px;
 }
 
-/* Картка елемента */
+/* Картка предмета */
 .item-card {
   display: flex;
   align-items: center;
-  background-color: rgba(31, 31, 31, 0.9);
-  border: 1px solid #3a3a3a;
+  background-color: rgba(31, 10, 10, 0.9);
+  border: 1px solid #552a2a;
   border-radius: 8px;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.03);
-  transition: background 0.2s;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 8px rgba(255, 100, 100, 0.05);
+  transition: background 0.2s ease;
 }
 
 .item-card:hover {
-  background-color: rgba(40, 40, 40, 0.9);
+  background-color: rgba(50, 15, 15, 0.95);
 }
 
 .item-image {
@@ -120,7 +135,7 @@ details[open] {
   height: 64px;
   object-fit: contain;
   border-radius: 6px;
-  border: 1px solid #444;
+  border: 1px solid #773a3a;
 }
 
 .item-text {
@@ -129,15 +144,15 @@ details[open] {
 
 .item-name {
   font-weight: bold;
-  color: #b0f0e6;
-  font-size: 1.1rem;
+  color: #fbe3e3;
+  font-size: 1.2rem;
   margin-bottom: 5px;
 }
 
 .item-desc {
-  color: #d0d0d0;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  color: #f0d0d0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* Посилання */
@@ -148,4 +163,41 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 600px) {
+  .item-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-image {
+    margin-bottom: 10px;
+  }
+}
+
+.stats-boxes {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.stat-box {
+  border: 1.5px double #aa5555;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  color: #f5c7c7;
+  background-color: rgba(50, 15, 15, 0.85);
+  min-width: 50px;
+  text-align: center;
+  user-select: none;
+  box-shadow: inset 0 0 6px rgba(255, 150, 150, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(255, 140, 140, 0.2);
 }
