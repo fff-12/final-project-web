@@ -40,8 +40,8 @@ def add_weapon_via_input(cursor):
         (class_id, weapon_name, img, damage, info)
     )
 
-# add_class_via_input(cursor)
-add_weapon_via_input(cursor)
+add_class_via_input(cursor)
+# add_weapon_via_input(cursor)
 connection.commit()
 connection.close()
 # /static/img/

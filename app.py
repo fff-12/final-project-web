@@ -33,7 +33,7 @@ def home():
 @app.route('/magic')
 def magic():
     classes, weapons1, weapons2 = db_connect()
-    return render_template('melee.html', weapons1=weapons2, classes=classes)
+    return render_template('melee.html', weapons2=weapons2, classes=classes)
 
 @app.route('/melee')
 def meele():
