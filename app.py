@@ -3,28 +3,19 @@ import sqlite3
 
 app = Flask(__name__)
 
-def db_connect():
+def db_connect(i):
 
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM Classes")
     classes = cursor.fetchall()
 
-    cursor.execute("SELECT * FROM Weapons WHERE class_id == 1")
+    cursor.execute("SELECT * FROM Weapons WHERE class_id == (?)", [i])
     weapons1 = cursor.fetchall()
-
-    cursor.execute("SELECT * FROM Weapons WHERE class_id == 2")
-    weapons2 = cursor.fetchall()
-
-#     cursor.execute("SELECT * FROM Weapons WHERE class_id == 3")
-#     weapons3 = cursor.fetchall()
-
-#     cursor.execute("SELECT * FROM Weapons WHERE class_id == 4")
-#     weapons4 = cursor.fetchall()
 
     conn.close()
 
-    return classes, weapons1, weapons2 #, weapons3, weapons4
+    return classes, weapons1
 
 @app.route('/')
 def home():
@@ -32,12 +23,12 @@ def home():
 
 @app.route('/magic')
 def magic():
-    classes, weapons1, weapons2 = db_connect()
-    return render_template('melee.html', weapons2=weapons2, classes=classes)
+    classes, weapons1 = db_connect(2)
+    return render_template('melee.html', weapons1=weapons1, classes=classes)
 
 @app.route('/melee')
 def meele():
-    classes, weapons1 = db_connect()
+    classes, weapons1 = db_connect(1)
     return render_template('melee.html', weapons1=weapons1, classes=classes)
 
 @app.route('/ranger')
