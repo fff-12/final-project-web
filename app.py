@@ -23,8 +23,8 @@ def home():
 
 @app.route('/magic')
 def magic():
-    classes, weapons1 = db_connect(2)
-    return render_template('melee.html', weapons1=weapons1, classes=classes)
+    classes, weapons2 = db_connect(2)
+    return render_template('magic.html', weapons2=weapons2, classes=classes)
 
 @app.route('/melee')
 def meele():
@@ -33,11 +33,13 @@ def meele():
 
 @app.route('/ranger')
 def ranger():
-    return render_template('ranger.html')
+    classes, weapons3 = db_connect(3)
+    return render_template('ranger.html', weapons3=weapons3, classes=classes)
 
 @app.route('/summoner')
 def summoner():
-    return render_template('summoner.html')
+    classes, weapons4 = db_connect(4)
+    return render_template('summoner.html', weapons4=weapons4, classes=classes)
 
 if __name__ == '__main__':
     app.run(debug=True)
